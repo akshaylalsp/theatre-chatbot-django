@@ -1,5 +1,12 @@
 {% extends 'base.html' %}
 
+
+
 {% block template %}
-    <h1>Theatre</h1>
+    {% for theatre in theatres %}
+        <div class="card">
+            <h2>{{theatre.name}}</h2>
+            <p>{{theatre.address}}</p>
+        </div>
+    {% endfor %}
 {% endblock %}

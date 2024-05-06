@@ -1,5 +1,24 @@
 {% extends 'base.html' %}
 
 {% block template %}
-    <h1>home</h1>
+    {% for movie in movies %}
+    <div class="movie_card">
+        <div class="info_section">
+            <div class="movie_header">
+                <img class="locandina"
+                    src="{{movie.image}}" />
+                <h1>{{movie.name}}</h1>
+                <h4>{{movie.datePublished}}, {{movie.inLanguage}}</h4>
+                <span class="minutes">{{movie.duration}}</span>
+                <p class="type">{{movie.genre}}</p>
+            </div>
+            <div class="movie_desc">
+                <p class="text">
+                    {{movie.summary}}
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    
 {% endblock %}
