@@ -14,7 +14,7 @@ def register_view(request):
             return redirect('login')  # Redirect to login page after successful registration
     else:
         form = RegistrationForm()
-    return render(request, 'register_sample.html', {'form': form})
+    return render(request, 'register/index.html', {'form': form})
 
 # User login view
 def login_view(request):
